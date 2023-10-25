@@ -1,0 +1,19 @@
+h4 {
+  margin: 0;
+}
+header {
+  background: #10163a;
+  height: 50px;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.logout {
+  border: none;
+  background: sandybrown;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}

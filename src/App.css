@@ -1,0 +1,21 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+.container {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.rows-container {
+  display: flex;
+gap: 20px;
+ min-height: 0;
+flex: 1; 
+padding: 20px 10px;
+
+}

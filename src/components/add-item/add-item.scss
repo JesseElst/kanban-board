@@ -1,0 +1,42 @@
+.add-button {
+  margin-top: auto;
+  background: none;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: start;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+  &:hover {
+    border-bottom: #586084 solid 3px;
+  }
+}
+.add-container {
+  background: #262c49;
+  margin-block: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  input {
+    background: none;
+    border: none;
+    border-bottom: 1px white solid;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+  }
+  button {
+    background: none;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

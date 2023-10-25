@@ -1,0 +1,22 @@
+.row {
+  background-color: #10163a;
+  min-width: 300px;
+  border-radius: 5px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  // padding-bottom: 20px;
+  align-self: stretch;
+  h2 {
+    margin: 0;
+    padding-block: 15px;
+    font-size: 20px;
+  }
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow: auto;
+}
