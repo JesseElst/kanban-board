@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/header/header";
 import { Login } from "./components/login/login";
 import { auth, db } from "./config/firebase";
+
 import { onAuthStateChanged } from "firebase/auth";
 import {
   Firestore,
@@ -18,6 +19,7 @@ import {
 
 import { Row } from "./components/row/row";
 import { Action, TestContext } from "./Context";
+import { RowCollection } from "./components/row-collection/row-collection";
 
 export interface IBacklog {
   title: string;
@@ -132,7 +134,6 @@ const getData = async (pathLine: string[]) => {
 };
 
 function App() {
-  // const [data, setData] = useState<dataProps>({ backlog: [], progress: [] });
   const [state, dispatch] = useReducer(reducer, { backlog: [], progress: [] });
   useEffect(() => {
     console.log("useEffect");
@@ -176,11 +177,8 @@ function App() {
       {!user && <Login />}
 
       {/* <DataContext.Provider value={{ state, dispatch }}> */}
-      <TestContext.Provider value={{ dispatch }}>
-        <main className="rows-container">
-          <Row header="backlog" items={state.backlog} />
-          <Row header="progress" items={state.progress} />
-        </main>
+      <TestContext.Provider value={{ dispatch, state }}>
+        <RowCollection />
       </TestContext.Provider>
       {/* </DataContext.Provider> */}
     </div>

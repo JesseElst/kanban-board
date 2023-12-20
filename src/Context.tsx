@@ -29,8 +29,10 @@ export type Action =
 
 export const TestContext = createContext<{
   dispatch: React.Dispatch<Action>;
+  state: dataProps;
 }>({
   dispatch: () => null,
+  state: { backlog: [], progress: [] },
 });
 
 // export const DataDispatchContext = createContext(null);

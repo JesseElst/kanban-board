@@ -16,7 +16,7 @@ export const Item = (props: ItemProps) => {
     useSortable({ id: props.title, animateLayoutChanges: () => false });
 
   const style: React.CSSProperties = {
-    transform: CSS.Transform.toString(transform),
+    transform: CSS.Translate.toString(transform),
     transition,
   };
   return (
